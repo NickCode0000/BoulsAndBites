@@ -1,0 +1,92 @@
+/* app/components/footer/footer.component.scss */
+
+// Import global variables
+@import '../../styles';
+
+.footer {
+  position: relative;  // Voeg dit toe
+  background-color: $primary-color;  // Use the global variable
+  color: white;
+  padding: 40px;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  margin-left: -10px;
+  margin-bottom: -10px;
+}
+
+.body-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 400px;
+  margin: auto;
+
+  .logo img {
+    height: 200px;
+    margin-left: -90px;
+    margin-top: -80px;
+  }
+
+  .space-between {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .address,
+  .socials,
+  .opening-hours,
+  .back-to-top {
+    margin-top: 10px;
+    padding: 30px;  // Adjust padding as needed
+    text-align: left;
+    min-height: 250px;
+  }
+}
+
+.copyright-top {
+  margin-top: 20px;
+  font-size: larger;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.copyright-bottom {
+  margin-top: 20px;
+  font-size: small;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+// Media queries for responsiveness
+@media (max-width: 600px) {
+  // Styles for screens with max width of 600px
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  // Styles for screens with min width of 601px and max width of 1200px
+  .footer-content {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1201px) {
+  // Styles for screens with min width of 1201px
+  .footer-content {
+    flex-direction: row;
+  }
+}

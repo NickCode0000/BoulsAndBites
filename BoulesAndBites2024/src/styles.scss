@@ -1,0 +1,53 @@
+// src/styles.scss
+
+// Global variables
+$primary-color: #283424;
+$secondary-color: #ffffff;
+$body-font: 'Montserrat', sans-serif;
+$default-padding: 20px;
+
+
+// Rest of your styles
+body {
+  font-family: $body-font !important;
+  font-size: x-large !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 100%;
+}
+
+p {
+  font-size: larger;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $body-font;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: auto !important;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 1201px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+// Add more global styles as needed

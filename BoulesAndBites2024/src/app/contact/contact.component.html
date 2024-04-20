@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="contact.component.scss">
+</head>
+<body>
+
+<div class="contact-form">
+  <form action="https://api.web3forms.com/submit" method="post" onsubmit="return validateForm()">
+    <div class="form-group">
+      <h2 id="contactUsTitle">neem contact op</h2>
+      <input type="hidden" name="access_key" value="9fa97bb2-f61c-4eca-99a6-e66ac18ead58">
+      <input type="text" id="name" name="name" placeholder="naam" required>
+      <input type="email" id="email" name="email" placeholder="email" required>
+      <textarea id="message" name="message" rows="4" placeholder="vul hier uw bericht in" required></textarea>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill in all the fields.");
+      return false;
+    }
+  }
+</script>
+
+</body>
+</html>
+
